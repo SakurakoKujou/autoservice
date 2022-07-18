@@ -1,0 +1,7 @@
+<HTML>
+<h1>Categories</h1>
+<%= form_with model: @category do |c| %>
+  <%= c.text_field :name , placeholder: 'NameCatygory'%>
+  <%= c.submit "Send" %>
+<% end %>
+</html>

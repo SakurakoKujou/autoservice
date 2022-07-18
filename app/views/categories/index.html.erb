@@ -1,0 +1,16 @@
+<h1>Listing Categories </h1>
+<table>
+ <% @category.each do |category| %>
+      <tr>
+        <td>CategoryName:</td>
+        <td><%= category.name %></td>
+        <td>
+      <%= link_to 'Show', category %>
+      </td>
+       <td><%= link_to 'Edit', edit_category_path(category) %></td>
+       <td><%= link_to 'Delete', category_path(category),
+           method: :delete %></td>
+      </tr>
+      
+  <% end %>
+  </table>

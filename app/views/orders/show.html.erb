@@ -1,0 +1,12 @@
+<HTML>
+<%= form_with model: @order do |c| %>
+<p>
+  <strong>OrderName:</strong>
+  <%= @order.nameOrder %>
+   <strong>ServiceID:</strong>
+  <%= @order.service_id %>
+  <strong>DataCreated:</strong>
+  <%=@order.created_at %>
+</p>
+<%end%>
+</HTML>

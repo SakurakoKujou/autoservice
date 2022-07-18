@@ -1,0 +1,16 @@
+<%= search_form_for @q do |f| %>
+
+
+<%= f.label :nameOrder_cont %>
+
+<%= f.search_field :nameOrder_cont , placeholder: 'Search_by_name_order_or_Service_Name'%>
+
+<%= f.label :created_at_cont %>
+
+<%= f.search_field :created_at_start , placeholder: 'Search_by_DataCreated'%>
+
+<%= f.submit "Search" %>
+
+<%= f.submit 'Save as XSLX',  formaction: orders_path(format: :xlsx) %>
+
+<% end %>

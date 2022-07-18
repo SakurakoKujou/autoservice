@@ -1,0 +1,8 @@
+<h1>Edit Service <h1>
+<%= form_with(model: Service, local: true) do |c| %>
+  <%= c.text_field :name , placeholder: 'Name_service'%>
+  <%= c.collection_select :category_id, Category.all, :id, :name %>
+   <%= c.collection_select :performer_id, Performer.all, :id, :lastName %>
+  <%= c.submit "Send" %>
+<% end %>
+</html>

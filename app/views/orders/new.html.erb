@@ -1,0 +1,8 @@
+<h1>New Order <h1>
+<%= form_with model: [@order]  do |c| %>
+  <%= c.text_field :nameOrder , placeholder: 'Name_order'%>
+  <%= c.label :service_id , "ServiceID:" %>
+  <%= c.collection_select :service_id, Service.all, :id, :name %>
+  <%= c.submit "Send" %>
+<% end %>
+</html>

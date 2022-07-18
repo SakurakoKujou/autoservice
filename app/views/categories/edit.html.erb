@@ -1,0 +1,7 @@
+<HTML>
+<h1>Categories change name</h1>
+<%= form_with model: @category do |c| %>
+  <%= c.text_field :name , placeholder: 'New_NameCatygory'%>
+  <%= c.submit "Send" %>
+<% end %>
+</html>

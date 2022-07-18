@@ -1,0 +1,18 @@
+<h1>Performers List</h1>
+<table>
+ <% @performer.each do |performer| %>
+      <tr>
+        <td>FirstName:</td>
+        <td><%=performer.firstName %></td>
+        <td>LastName:</td>
+        <td><%=performer.lastName %></td>
+        <td>
+      <%= link_to 'Show', performer %>
+      </td>
+       <td><%= link_to 'Edit', edit_performer_path(performer) %></td>
+       <td><%= link_to 'Delete', performer_path(performer),
+           method: :delete %></td>
+      </tr>
+      
+  <% end %>
+  </table>

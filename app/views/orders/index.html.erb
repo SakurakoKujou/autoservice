@@ -1,0 +1,30 @@
+<h1>Listing Orders </h1>
+<div>Search:<div/>
+<%= render "/orders/search_form.html.erb" %>
+<strong>All Orders</strong>
+<table>
+  <thead>
+    <tr>
+       <th><%= sort_link(@q, :service_id, default_order: :asc) %></th>
+       <th><%= sort_link(@q, :nameOrder, "Name", default_order: :asc) %></th>
+      <th><%= sort_link(@q, :created_at, "CreatedData", default_order: :desc) %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @order.each do |order| %>
+      <tr>
+        <td>ServiceName: </td>
+        <td><%= order.service.name %></td>
+        <td>OrderName:</td>
+        <td><%= order.nameOrder %></td>
+        <td><%= order.created_at %></td>
+        <td><%= link_to 'Show', order %></td>
+        <td><%= link_to 'Edit', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>

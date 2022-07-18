@@ -1,0 +1,20 @@
+<HTML>
+<%= form_with model: @service do |c| %>
+<p>
+  <strong>Title:</strong>
+  <%= @service.name %>
+</p>
+<%end%>
+</HTML>
+<HTML>
+<%= form_with model: @service do |c| %>
+<p>
+  <strong>ServiceName:</strong>
+  <%= @service.name %>
+   <strong>CategoryID:</strong>
+  <%= @service.category_id %>
+  <strong>PerformerID:</strong>
+  <%= @service.performer_id %>
+</p>
+<%end%>
+</HTML>

@@ -1,0 +1,16 @@
+<h1>Listing Services </h1>
+<table>
+ <% @service.each do |service| %>
+      <tr>
+        <td>ServiceName:</td>
+        <td><%= service.name %></td>
+        <td>
+      <%= link_to 'Show', service %>
+      </td>
+       <td><%= link_to 'Edit', edit_service_path(service) %></td>
+       <td><%= link_to 'Delete', service_path(service),
+           method: :delete %></td>
+      </tr>
+      
+  <% end %>
+  </table>

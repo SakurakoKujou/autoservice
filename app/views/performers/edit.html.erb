@@ -1,0 +1,8 @@
+<HTML>
+<h1>Performers change </h1>
+<%= form_with model: @performer do |c| %>
+  <%= c.text_field :firstName , placeholder: 'Change_firstName'%>
+  <%= c.text_field :lastName , placeholder: 'Change_lastName'%>
+  <%= c.submit "Send" %>
+<% end %>
+</html>
